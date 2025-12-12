@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ドキュメント</title>
+  <meta name="author" content="Docs Team">
+  
+      <link rel="stylesheet" href="assets/style.css">
+  </head>
+<body>
+  <header>
+    <h1 class="page-title">ドキュメント</h1>
+        <nav class="toc-container">
+      <h2>目次</h2>
+      <ul>
+      <li><a href="#sections" id="toc-sections"><span
+      class="toc-section-number">1</span> セクション構造のサンプル</a>
+      <ul>
+      <li><a href="#intro" id="toc-intro"><span
+      class="toc-section-number">1.1</span> はじめに</a></li>
+      <li><a href="#usage" id="toc-usage"><span
+      class="toc-section-number">1.2</span> 使い方</a>
+      <ul>
+      <li><a href="#install" id="toc-install"><span
+      class="toc-section-number">1.2.1</span> インストール</a></li>
+      <li><a href="#commands" id="toc-commands"><span
+      class="toc-section-number">1.2.2</span> コマンド</a></li>
+      </ul></li>
+      <li><a href="#notes" id="toc-notes"><span
+      class="toc-section-number">1.3</span> 注意事項</a></li>
+      </ul></li>
+      </ul>
+    </nav>
+      </header>
+  <main>
+    <h1 data-number="1" id="sections"><span
+    class="header-section-number">1</span> セクション構造のサンプル</h1>
+    <h2 data-number="1.1" id="intro"><span
+    class="header-section-number">1.1</span> はじめに</h2>
+    <p>このページは見出し階層と目次出力が意図どおりになることを確認するためのフィクスチャです。</p>
+    <h2 data-number="1.2" id="usage"><span
+    class="header-section-number">1.2</span> 使い方</h2>
+    <h3 data-number="1.2.1" id="install"><span
+    class="header-section-number">1.2.1</span> インストール</h3>
+    <pre><code>npm install</code></pre>
+    <h3 data-number="1.2.2" id="commands"><span
+    class="header-section-number">1.2.2</span> コマンド</h3>
+    <ul>
+    <li><code>npm run build:docs</code>: 本番コンテンツをdistへ変換</li>
+    <li><code>npm run test:fixtures</code>:
+    フィクスチャの期待出力と比較</li>
+    </ul>
+    <h2 data-number="1.3" id="notes"><span
+    class="header-section-number">1.3</span> 注意事項</h2>
+    <ul>
+    <li>見出しにIDを付けることで、アンカーの生成と目次が安定します。</li>
+    </ul>
+  </main>
+</body>
+</html>

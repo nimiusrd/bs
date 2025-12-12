@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ドキュメント</title>
+  <meta name="author" content="Docs Team">
+  
+      <link rel="stylesheet" href="assets/style.css">
+  </head>
+<body>
+  <header>
+    <h1 class="page-title">ドキュメント</h1>
+        <nav class="toc-container">
+      <h2>目次</h2>
+      <ul>
+      <li><a href="#overview" id="toc-overview"><span
+      class="toc-section-number">1</span> ドキュメント概要</a>
+      <ul>
+      <li><a href="#toc" id="toc-toc"><span
+      class="toc-section-number">1.1</span> 目次</a></li>
+      <li><a href="#guidelines" id="toc-guidelines"><span
+      class="toc-section-number">1.2</span> ガイドライン</a></li>
+      </ul></li>
+      </ul>
+    </nav>
+      </header>
+  <main>
+    <h1 data-number="1" id="overview"><span
+    class="header-section-number">1</span> ドキュメント概要</h1>
+    <p>このサイトは Pandoc を用いて Markdown から生成された HTML
+    ドキュメントです。セクション構造、図、表が安定して出力されることを確認するため、代表的なサンプルをフィクスチャとして用意しています。</p>
+    <h2 data-number="1.1" id="toc"><span
+    class="header-section-number">1.1</span> 目次</h2>
+    <ul>
+    <li>セクションの例: <code>fixtures/src/sections.md</code></li>
+    <li>図の例: <code>fixtures/src/figures.md</code></li>
+    <li>表の例: <code>fixtures/src/tables.md</code></li>
+    </ul>
+    <h2 data-number="1.2" id="guidelines"><span
+    class="header-section-number">1.2</span> ガイドライン</h2>
+    <ul>
+    <li>Markdown には見出しに ID
+    を付与して、安定したアンカーを生成してください。</li>
+    <li>図や表にはキャプションを付け、必要に応じて ID
+    を付けてください。</li>
+    <li>本番コンテンツは <code>content/</code>
+    配下に配置し、<code>npm run build:docs</code> で <code>dist/</code>
+    に HTML を出力します。</li>
+    </ul>
+  </main>
+</body>
+</html>
