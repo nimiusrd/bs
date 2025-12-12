@@ -1,0 +1,11 @@
+from: markdown
+to: html5
+standalone: true
+toc: true
+number-sections: true
+template: pandoc/template.html5
+css:
+  - assets/style.css
+metadata-file:
+  - pandoc/meta.yaml
+

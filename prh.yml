@@ -1,0 +1,7 @@
+version: 1
+rules:
+  - expected: ドキュメント
+    pattern: /ドキュメント(?!)/  # サンプルのため実質置換なし
+  - expected: インストール
+    pattern: /インストール(?!)/  # 用語揺れ防止の例
+

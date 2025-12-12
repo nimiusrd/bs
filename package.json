@@ -1,0 +1,18 @@
+{
+  "name": "pandoc-docs",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "lint:text": "textlint \"content/**/*.md\" \"fixtures/src/**/*.md\"",
+    "build:docs": "bash scripts/build-docs.sh",
+    "build:fixtures": "bash scripts/build-fixtures.sh",
+    "test:fixtures": "bash scripts/test-fixtures.sh"
+  },
+  "devDependencies": {
+    "textlint": "^13.4.1",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0",
+    "textlint-rule-preset-ja-spacing": "^3.0.0",
+    "textlint-rule-prh": "^5.5.0"
+  }
+}
+

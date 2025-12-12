@@ -1,0 +1,13 @@
+rules:
+  preset-ja-technical-writing:
+    # よく使う基本設定。必要に応じて調整してください。
+    max-kanji-continuous-len: 6
+    max-ten: 5
+    no-mix-dearu-desumasu: true
+  preset-ja-spacing: true
+  prh:
+    rulePaths:
+      - prh.yml
+filters:
+  comments: true
+

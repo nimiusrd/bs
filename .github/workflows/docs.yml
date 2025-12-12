@@ -1,0 +1,55 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install deps
+        run: npm ci
+      - name: textlint
+        run: npm run lint:text
+
+  fixtures:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install deps
+        run: npm ci
+      - name: Test fixtures (Pandoc diff)
+        run: npm run test:fixtures
+
+  build:
+    runs-on: ubuntu-latest
+    needs: fixtures
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install deps
+        run: npm ci
+      - name: Build docs (HTML)
+        run: npm run build:docs
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-dist
+          path: dist
+
