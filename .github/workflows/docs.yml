@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Install deps
         run: npm ci
       - name: textlint
@@ -28,9 +28,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Install deps
         run: npm ci
+      - name: Install pandoc
+        uses: pandoc/actions/setup@v1
+        with:
+          version: 3.8.3
       - name: Test fixtures (Pandoc diff)
         run: npm run test:fixtures
 
@@ -42,9 +46,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Install deps
         run: npm ci
+      - name: Install pandoc
+        uses: pandoc/actions/setup@v1
+        with:
+          version: 3.8.3
       - name: Build docs (HTML)
         run: npm run build:docs
       - name: Upload artifact
